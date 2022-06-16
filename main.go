@@ -8,6 +8,9 @@ import (
 
 func main() {
 	phrase := os.Args[1]
-	wordSls := strings.Split(phrase, " ")
-	fmt.Println(len(wordSls))
+	count := 0
+	if phrase != "" {
+		count = len(strings.Split(phrase, " "))
+	}
+	fmt.Println(count)
 }
